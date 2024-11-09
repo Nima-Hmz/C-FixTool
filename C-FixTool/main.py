@@ -4,10 +4,14 @@ import argparse
 
 def main(file):
 	# The core of applicatoin
+
+	# Checking that the file exists
 	file_status = syntax_checker.check_file(file)
 	if file_status == 0:
+		print("Invalid file. Please provide a valid C file.")
 		return 
 
+	# First compilation of the C program
 	if syntax_checker.compilation(file):
 		print('You are lucky; your program has no errors.')
 		return

@@ -4,7 +4,6 @@ import os
 def check_file(c_file_path):
 	# Check if the file exists and has .c extension
 	if not os.path.isfile(c_file_path) or not c_file_path.endswith('.c'):
-		print("Invalid file. Please provide a valid C file.")
 		return 0
 	return 1
 
