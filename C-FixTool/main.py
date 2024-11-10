@@ -18,9 +18,12 @@ def main(file):
 		return 
 
 	# First compilation of the C program
-	compilation_result = file_checker.compilation(file)
+	compilation_result = file_checker.compilation_test(file)
 	if compilation_result[0] == 1:
-		print("You're lucky; there are no errors in your program already.")
+		print("You're lucky; there are no errors in your program already. \n"
+			"this is the output of your code:\n")
+		print(file_checker.compilation('output/program.out'))
+		print("\nAlso you can check the output file in the output directory")	
 		return
 
 
