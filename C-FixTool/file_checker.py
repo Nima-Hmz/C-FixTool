@@ -11,7 +11,7 @@ def compilation_test(c_file_path):
 	# Check if the C file has no errors(by compiling it)
     try:
         result = subprocess.run(
-            ['gcc', c_file_path, '-o', 'output/program.out'],
+            ['gcc', c_file_path, '-o', 'output/ready_to_run/program.out'],
             capture_output=True,
             text=True
         )
