@@ -1,19 +1,26 @@
-import syntax_checker
+import file_checker
 import argparse
 
 
 def main(file):
-	# The core of applicatoin
+	"""
+    The main execution function for the program.
+
+    This function serves as the entry point for the application.
+    When the user runs main.py, this function is called to start 
+    the program and coordinate the core operations.
+    """ 
 
 	# Checking that the file exists
-	file_status = syntax_checker.check_file(file)
+	file_status = file_checker.check_file(file)
 	if file_status == 0:
 		print("Invalid file. Please provide a valid C file.")
 		return 
 
 	# First compilation of the C program
-	if syntax_checker.compilation(file):
-		print('You are lucky; your program has no errors.')
+	compilation_result = file_checker.compilation(file)
+	if compilation_result[0] == 1:
+		print("You're lucky; there are no errors in your program already.")
 		return
 
 

@@ -11,14 +11,17 @@ def compilation(c_file_path):
 	# Check the syntax of c file (by compiling it)
     try:
         result = subprocess.run(
-            ['gcc', '-fsyntax-only', c_file_path],
+            ['gcc', c_file_path],
             capture_output=True,
             text=True
         )
 
         if result.returncode == 0:
-            return 1
+            compilation_result = (1,)
+            return compilation_result
         else:
-        	return 0, result.stderr
+            compilation_result = (0, result.stderr)
+            return compilation_result
+            
     except FileNotFoundError:
         print("GCC is not installed. Please install GCC to use this script.")
