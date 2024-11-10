@@ -19,7 +19,7 @@ def load_modules_from_directory(directory_path):
     
     return modules
 
-def corrector(c_file_path, output_path_file, modules):
+def corrector(input_file_path, output_file_path, modules):
 	"""Process each line of the input file using all modules and write to the output file."""
 	with open(input_file_path, 'r') as input_file, open(output_file_path, 'w') as output_file:
 		for line in input_file:
@@ -28,17 +28,4 @@ def corrector(c_file_path, output_path_file, modules):
 			for module in modules:
 				processed_line = module.process_line(processed_line)
 			# Write the processed line to the output file
-			output_file.write(processed_line)
-
-
-
-
-
-
-
-
-
-
-
-
-
+			output_file.write(processed_line + '\n')
