@@ -26,8 +26,10 @@ def main(file):
 		print("\nAlso you can check the output file in the output/ready_to_run directory")	
 		return
 
-	print("end of main")
-	corrector_output = error_corrector.corrector(file)
+	# Start analysis
+	print("Start analysis")
+	modules = error_corrector.load_modules_from_directory('analysis/')
+	# corrector_output = error_corrector.corrector(file)
 
 
 
