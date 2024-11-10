@@ -23,7 +23,7 @@ def main(file):
 		print("You're lucky; there are no errors in your program already. \n"
 			"this is the output of your code:\n")
 		print(file_checker.compilation('output/ready_to_run/program.out'))
-		print("\nAlso you can check the output file in the output directory")	
+		print("\nAlso you can check the output file in the output/ready_to_run directory")	
 		return
 
 	print("end of main")
