@@ -42,7 +42,8 @@ def main(file):
 		print("We worked on your program file, but it was not fixed after our analysis.\n"
 				"This is the error I received:\n\n"
 				f"{compilation_result[1]}"
-				"\nYou can view our changes to your file in the following directory."
+				"\nYou can view our changes to your file in the following directory:"
+				"output/checked/beta/"
 			)
 
 

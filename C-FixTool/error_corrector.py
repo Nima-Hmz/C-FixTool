@@ -28,4 +28,4 @@ def corrector(input_file_path, output_file_path, modules):
 			for module in modules:
 				processed_line = module.process_line(processed_line)
 			# Write the processed line to the output file
-			output_file.write(processed_line + '\n')
+			output_file.write(processed_line + '\n' if not processed_line.endswith('\n') else processed_line)
