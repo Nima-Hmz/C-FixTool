@@ -2,13 +2,16 @@ import os
 import importlib.util
 
 def load_modules_from_directory(directory_path):
-    """Dynamically load all Python modules in a specified directory."""
+    """Dynamically load specified Python modules in a fixed order."""
+    # Define the desired order of modules
+    ordered_module_names = ['missing_semicolons', 'missing_parenthesesclosed', 'key_words']
     modules = []
-    for filename in os.listdir(directory_path):
-        if filename.endswith('.py'):
-            module_name = filename[:-3]  # Remove the '.py' extension
-            file_path = os.path.join(directory_path, filename)
-            
+    
+    for module_name in ordered_module_names:
+        filename = f"{module_name}.py"
+        file_path = os.path.join(directory_path, filename)
+        
+        if os.path.isfile(file_path):  # Check if the file exists
             # Load the module dynamically
             spec = importlib.util.spec_from_file_location(module_name, file_path)
             module = importlib.util.module_from_spec(spec)
