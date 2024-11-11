@@ -36,7 +36,7 @@ def main(file):
 		print("Your program has been fixed, and you can now use it. \n"
 			"this is the output of your code:\n")
 		print(file_checker.compilation('output/ready_to_run/program.out'))
-		print("\nAlso you can check the output file in the output/ready_to_run directory")	
+		print("\nAlso you can check the output file in the output/checked/beta/program.c directory")	
 		return
 	else:
 		print("We worked on your program file, but it was not fixed after our analysis.\n"

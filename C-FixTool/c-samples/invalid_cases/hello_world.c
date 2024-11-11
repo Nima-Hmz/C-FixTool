@@ -1,6 +1,6 @@
 #include <stdio.h>
 
 int main() {
-  ali("Hello World!");
+  printf("Hello World!")
   return 1;
 } 
