@@ -16,7 +16,7 @@ and other syntax errors, and applies corrections where possible.
 ## Installation
 1) Clone the repository:
    ```git clone https://github.com/Nima-Hmz/C-FixTool.git```
-2) make sure you have python3 installed on your computer then install dependencies in project directory:
+2) make sure you have python3 installed on your computer.
 
 ## Usage
 1) Navigate to the C-FixTool directory:
