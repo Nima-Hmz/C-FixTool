@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int main() {
-  printf("Hello World!");
-  return 1;
-} 
+float ali = 0;
+printf("Hello World!");
+return ;
+}
