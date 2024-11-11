@@ -1,6 +1,6 @@
 def process_line(line):
-    # Missing parentheses
-    # Count open and close parentheses
+    # Missing parentheses (closed one)
+    # Count close & open parentheses
     open_count = line.count("(")
     close_count = line.count(")")
     
